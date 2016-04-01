@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sb="http://simplector.lyoshka.net/base/2.0"
+   xmlns:sp="http://simplector.lyoshka.net/pro/2.0"
+   width="24.0px"
+   height="24.0px"
+   viewBox="0 0 24.0 24.0"
+   sb:fontSize="Custom"
+   sb:pageOrientation="Portrait"
+   version="1.1"
+   sb:version="2.0.19"
+   >
+   <desc>Created in Simplector Pro</desc>
+   <g
+      id="116"
+
+      sb:layerName="TextFigure-115"
+      sb:layerVisible="true"
+      sb:layerLocked="false"
+      >
+      <path
+         id="117"
+         transform="matrix(0.01992142,0.0,0.0,-0.012362637,1.8644804,21.0)"
+         fill="rgb(255,255,255)"
+         fill-opacity="1.0"
+         stroke-width="106.818184"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-miterlimit="2.0"
+         stroke="rgb(0,0,0)"
+         stroke-opacity="0.0"
+         d="
+         M 960.55005 655.2001 L 960.55 0.0 L 659.36664 0.0 L 659.36664 161.77783 L 56.99994 161.77783 
+         L 56.99994 728.0 L 458.5777 1456.0 L 960.55 1456.0 Z M 358.1833 566.2223 L 659.36664 566.2223 
+         L 659.36664 1132.4446 Z 
+         "
+
+         sb:layerName="unit-0 (4)"
+         sb:layerVisible="true"
+         sb:layerLocked="false"
+         sb:pathType="path"
+         >
+      </path>
+   </g>
+   <sp:keyframes
+
+      sp:step="100"
+      sp:dur="10000"
+      >
+      <sp:keyframe
+
+         sp:time="0"
+         >
+      </sp:keyframe>
+   </sp:keyframes>
+</svg>
