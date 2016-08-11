@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta description="Приложение ForPDA - неофициоальный клиент сайта 4pda.ru">
+		<meta keywords="ForPDA, неофициальный клиент 4pda">
+		<link href="css/styles.css" rel="stylesheet">
+		<title>ForPDA - Неофициальный клиент сайта 4pda.ru</title>
+	</head>
+<body>
+	<div class="dev_message">
+		<h1>Привет!
+		<br>Мы рады, что вы зашли к нам!</h1>
+		<div>Но... в данный момент сайт на стадии разработки, надеемся он вам понравится 8)</div>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	</div>
+</body>
+</html>		
