@@ -5,10 +5,231 @@ html {
 }
 body {
   margin: 0;
-  padding: 1rem;
+  padding: 0;
   font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
+header {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+  background: #0288d1;
+}
+header .logo {
+  display: inline-block;
+  vertical-align: middle;
+}
+header .logo a {
+  display: block;
+}
+header .logo a img {
+  display: block;
+  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+header h1 {
+  display: inline-block;
+  margin: 0;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+header h1 span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+header nav {
+  margin: 1rem 0 0;
+  overflow-x: auto;
+  color: white;
+  background: #0288d1;
+}
+header nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+header nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: inherit;
+}
+main {
+  display: block;
+  overflow: hidden;
+}
+main .gallery {
+  overflow-x: scroll;
+}
+main .gallery > div {
+  white-space: nowrap;
+}
+main .gallery > div a {
+  display: inline-block;
+  margin: 0;
+}
+main .gallery > div a img {
+  display: block;
+  max-height: 15rem;
+}
+main article {
+  margin: auto;
+  max-width: 50rem;
+}
+main article h1 {
+  font-size: 1.5rem;
+}
+main article section {
+  display: block;
+}
+main article section .ava {
+  float: left;
+  margin: 0 1.25rem 0.75rem 0;
+}
+@media screen and (max-width: 30rem) {
+  main article section .ava {
+    display: block;
+    text-align: center;
+    float: none;
+    margin: 0 auto 0.075rem;
+  }
+}
+main article section .ava a {
+  display: inline-block;
+}
+main article section .ava a img {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 100%;
+}
+@media screen and (max-width: 30rem) {
+  main article section .ava a img {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+main article section .inf {
+  text-align: left;
+}
+@media screen and (max-width: 30rem) {
+  main article section .inf {
+    text-align: center;
+  }
+}
+main article section .inf .name {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+main article section .inf .scills {
+  margin: 0.5rem 0;
+  color: #8a8a8a;
+}
+main article section ul {
+  clear: both;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-align: left;
+}
+@media screen and (max-width: 30rem) {
+  main article section ul {
+    text-align: center;
+  }
+}
+main article section ul li {
+  display: inline-block;
+  position: relativve;
+  margin: 0.5rem;
+  list-style-type: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1.5rem;
+  background: #ccc;
+}
+main article section ul li a {
+  margin-bottom: 0.0625rem;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white !important;
+}
+main.home {
+  background-color: white;
+}
+main.home article {
+  padding: 1rem;
+}
+main.home article p {
+  margin-left: 1rem;
+}
+main.home article section {
+  position: relative;
+  margin: 1rem 0;
+  overflow: hippen;
+}
+main.home article section .button.download {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.875rem;
+  border-radius: 0.125rem;
+  background: green;
+}
+main.home article section .button.download a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.0625rem;
+  text-decoration: none;
+  color: white;
+}
+@media (min-width: 50rem) {
+  main.developers article {
+    text-align: center;
+  }
+}
+main.developers article section {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 50rem) {
+  main.developers article section {
+    display: inline-block;
+    width: 20rem;
+  }
+}
+main.developers article H1 {
+  display: none;
+}
+footer {
+  overflow: hidden;
+  padding: 2rem;
+  text-align: center;
+  color: grey;
+}
+footer p {
+  padding: 0;
+  margin: 0;
+}
+/*
+* Сообщение о работе на сайте
+*/
 .dev_message {
   width: 35rem;
   max-width: 90%;
@@ -27,3 +248,4 @@ body {
   margin: 1.5rem;
   color: grey;
 }
+
