@@ -1,0 +1,250 @@
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	background-color: rgba(0,0,0,0.1);
+}
+header {
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: white;
+	background: #0288d1;
+	.logo {
+		display: inline-block;
+		vertical-align: middle;
+		a {
+			display: block;
+			img {
+				display: block;
+				padding: 0.5rem;
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+		}
+	}
+	h1 {
+		display: inline-block;
+		margin: 0;
+		font-size: 1rem;
+		vertical-align: middle;
+		span {
+			display: block;
+			font-weight: normal;
+			font-size: 14*0.0625rem;
+			opacity: 0.7;
+		}
+	}
+	nav {
+		margin: 1rem 0 0;
+		overflow-x: auto;
+		color: white;
+		background: #0288d1;
+		ul {
+			padding: 0;
+			margin: 0;
+			text-align: center;
+			li {
+				display: inline-block;
+				list-style-type: none;
+				a {
+					display: block;
+					padding: 0.5rem 1rem;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-weight: bold;
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+main {
+	display: block;
+	overflow: hidden;
+	.gallery {
+		overflow-x: scroll;
+		> div {
+			white-space: nowrap;
+			a {
+				display: inline-block;
+				margin: 0;
+				img {
+					display: block;
+					max-height: 15rem;
+				}
+			}
+		}
+	}
+	article {
+		margin: auto;
+		max-width: 50rem;
+		h1 {
+			font-size: 1.5rem;
+		}
+		section {
+			display: block;
+			.ava {
+				float: left;
+				margin: 0 1.25rem 0.75rem 0;
+				@media screen and (max-width: 30rem) {
+					display: block;
+					text-align: center;
+					float: none;
+					margin: 0 auto 0.075rem;
+				}
+				a {
+					display: inline-block;
+					img {
+						display: block;
+						height: 5rem;
+						width: 5rem;
+						max-height: 100%;
+						max-width: 100%;
+						overflow: hidden;
+						border-radius: 100%;
+						@media screen and (max-width: 30rem) {
+							height: 7.5rem;
+							width: 7.5rem;
+						}
+					}
+				}
+			}
+			.inf {
+				text-align: left;
+				@media screen and (max-width: 30rem) {
+					text-align: center;
+				}
+				.name {
+					margin: 0.5rem 0;
+					font-size: 1.25rem;
+				}
+				.scills {
+					margin: 0.5rem 0;
+					color: rgb(138,138,138);
+				}
+			}
+			ul {
+				clear: both;
+				margin: 1rem 0 0 0;
+				padding: 0;
+				text-align: left;
+				@media screen and (max-width: 30rem) {
+					text-align: center;
+				}
+				li {
+					display: inline-block;
+					position: relativve;
+					margin: 0.5rem;
+					list-style-type: none;
+					padding: 0.25rem 0.5rem;
+					border-radius: 1.5rem;
+					background: #ccc;
+					a {
+						margin-bottom: 0.0625rem;
+						display: inline-block;
+						text-decoration: none;
+						text-transform: uppercase;
+						color: white !important;
+					}
+				}
+			}
+		}
+	}
+	&.home {
+		background-color: white;
+		article {
+			padding: 1rem;
+			p {
+				margin-left: 1rem;
+			}
+			section {
+				position: relative;
+				margin: 1rem 0;
+				overflow: hippen;
+				.ver {
+				}
+				.button.download {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					margin-top: -14*0.0625rem;
+					border-radius: 0.125rem;
+					background: green;
+					a {
+						display: inline-block;
+						padding: 0.25rem 0.5rem;
+						margin-bottom: 0.0625rem;
+						text-decoration: none;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	&.developers {
+		article {
+			@media (min-width: 50rem) {
+				text-align: center;
+			}
+			section {
+				margin: 0.5rem;
+				padding: 1rem;
+				border-radius: 0.125rem;
+				background-color: white;
+				-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.1);@media screen {
+				@media (min-width: 50rem) {
+					display: inline-block;
+					width: 20rem;
+				}
+			}
+			}
+			H1 {
+				display: none;
+			}
+		}
+	}
+}
+
+footer {
+	overflow: hidden;
+	padding: 2rem;
+	text-align: center;
+	color: grey;
+//	background-color: lightgrey;
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+/*
+* Сообщение о работе на сайте
+*/
+
+.dev_message {
+	width: 35rem;
+	max-width: 90%;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 0.125rem;
+	background-color: white;
+	-webkit-box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2), 0 0.5rem 1rem rgba(0,0,0,0.1);
+	> h1 {
+		margin: 1.5rem;
+	}
+	> div {
+		margin: 1.5rem;
+		color: grey;
+	}
+}
