@@ -66,50 +66,93 @@ header nav ul li a {
   font-weight: bold;
   color: inherit;
 }
-main {
+body.home main {
   display: block;
   overflow: hidden;
+  background-color: white;
 }
-main .gallery {
+body.home main .gallery {
   overflow-x: scroll;
+  text-align: center;
 }
-main .gallery > div {
+body.home main .gallery > div {
   white-space: nowrap;
 }
-main .gallery > div a {
+body.home main .gallery > div a {
   display: inline-block;
   margin: 0;
 }
-main .gallery > div a img {
+body.home main .gallery > div a img {
   display: block;
   max-height: 15rem;
 }
-main article {
+body.home main article {
+  padding: 1rem;
   margin: auto;
   max-width: 50rem;
 }
-main article h1 {
+body.home main article h1 {
   font-size: 1.5rem;
 }
-main article section {
-  display: block;
+body.home main article p {
+  margin-left: 1rem;
 }
-main article section .ava {
+body.home main article section {
+  position: relative;
+  margin: 1rem 0;
+  overflow: hippen;
+}
+body.home main article section .button.download {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -0.875rem;
+  border-radius: 0.125rem;
+  background: green;
+}
+body.home main article section .button.download a {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.0625rem;
+  text-decoration: none;
+  color: white;
+}
+body.developers article {
+  margin: auto;
+  max-width: 50rem;
+}
+@media (min-width: 50rem) {
+  body.developers article {
+    text-align: center;
+  }
+}
+body.developers article h1 {
+  display: none;
+  font-size: 1.5rem;
+}
+body.developers article section {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.125rem;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+body.developers article section .ava {
   float: left;
   margin: 0 1.25rem 0.75rem 0;
 }
 @media screen and (max-width: 30rem) {
-  main article section .ava {
+  body.developers article section .ava {
     display: block;
     text-align: center;
     float: none;
     margin: 0 auto 0.075rem;
   }
 }
-main article section .ava a {
+body.developers article section .ava a {
   display: inline-block;
 }
-main article section .ava a img {
+body.developers article section .ava a img {
   display: block;
   height: 5rem;
   width: 5rem;
@@ -119,103 +162,53 @@ main article section .ava a img {
   border-radius: 100%;
 }
 @media screen and (max-width: 30rem) {
-  main article section .ava a img {
+  body.developers article section .ava a img {
     height: 7.5rem;
     width: 7.5rem;
   }
 }
-main article section .inf {
+body.developers article section .inf {
   text-align: left;
 }
 @media screen and (max-width: 30rem) {
-  main article section .inf {
+  body.developers article section .inf {
     text-align: center;
   }
 }
-main article section .inf .name {
+body.developers article section .inf .name {
   margin: 0.5rem 0;
   font-size: 1.25rem;
 }
-main article section .inf .scills {
+body.developers article section .inf .scills {
   margin: 0.5rem 0;
   color: #8a8a8a;
 }
-main article section ul {
+body.developers article section ul {
   clear: both;
   margin: 1rem 0 0 0;
   padding: 0;
   text-align: left;
 }
 @media screen and (max-width: 30rem) {
-  main article section ul {
+  body.developers article section ul {
     text-align: center;
   }
 }
-main article section ul li {
+body.developers article section ul li {
   display: inline-block;
   position: relativve;
-  margin: 0.5rem;
+  margin: 0.25rem;
   list-style-type: none;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 1.5rem;
   background: #ccc;
 }
-main article section ul li a {
+body.developers article section ul li a {
   margin-bottom: 0.0625rem;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
   color: white !important;
-}
-main.home {
-  background-color: white;
-}
-main.home article {
-  padding: 1rem;
-}
-main.home article p {
-  margin-left: 1rem;
-}
-main.home article section {
-  position: relative;
-  margin: 1rem 0;
-  overflow: hippen;
-}
-main.home article section .button.download {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-top: -0.875rem;
-  border-radius: 0.125rem;
-  background: green;
-}
-main.home article section .button.download a {
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  margin-bottom: 0.0625rem;
-  text-decoration: none;
-  color: white;
-}
-@media (min-width: 50rem) {
-  main.developers article {
-    text-align: center;
-  }
-}
-main.developers article section {
-  margin: 0.5rem;
-  padding: 1rem;
-  border-radius: 0.125rem;
-  background-color: white;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-@media screen and (min-width: 50rem) {
-  main.developers article section {
-    display: inline-block;
-    width: 20rem;
-  }
-}
-main.developers article H1 {
-  display: none;
 }
 footer {
   overflow: hidden;
