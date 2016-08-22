@@ -6,7 +6,7 @@
 	<meta name="description" content="Приложение ForPDA - неофициоальный клиент сайта 4pda.ru">
 	<meta name="keywords" content="ForPDA, неофициальный клиент 4pda">
 	<title>ForPDA | Разработчики</title>
-	<link href="styles/styles.css" rel="stylesheet">
+	<!--link href="styles/styles.css" rel="stylesheet"-->
 	<script type="text/javascript" src="../../z_forum_helpers.js"></script>
 </head>
 <body class="developers">

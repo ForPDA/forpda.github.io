@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sb="http://simplector.lyoshka.net/base/2.0"
+   xmlns:sp="http://simplector.lyoshka.net/pro/2.0"
+   width="24.0px"
+   height="24.0px"
+   viewBox="0 0 24.0 24.0"
+   sb:fontSize="Custom"
+   sb:pageOrientation="Portrait"
+   version="1.1"
+   sb:version="2.0.26"
+   >
+   <desc>Created in Simplector Pro</desc>
+   <g
+      id="122"
+
+      sb:layerName="svg-122"
+      sb:layerVisible="true"
+      sb:layerLocked="false"
+      >
+      <path
+         id="121"
+         fill="rgb(255,255,255)"
+         fill-opacity="1.0"
+         stroke-width="4.0px"
+         stroke-linecap="butt"
+         stroke-linejoin="miter"
+         stroke-miterlimit="1.0"
+         stroke="rgb(0,0,0)"
+         stroke-opacity="0.0"
+         d="
+         M 3.0 6.0 L 21.0 6.0 L 21.0 8.0 L 3.0 8.0 L 3.0 6.0 M 3.0 11.0 L 21.0 11.0 L 21.0 13.0 
+         L 3.0 13.0 L 3.0 11.0 M 3.0 16.0 L 21.0 16.0 L 21.0 18.0 L 3.0 18.0 L 3.0 16.0 Z 
+         
+         "
+
+         sb:layerName="path-121"
+         sb:layerVisible="true"
+         sb:layerLocked="false"
+         sb:pathType="path"
+         >
+      </path>
+   </g>
+   <sp:keyframes
+
+      sp:step="100"
+      sp:dur="10000"
+      >
+      <sp:keyframe
+
+         sp:time="0"
+         >
+      </sp:keyframe>
+   </sp:keyframes>
+</svg>

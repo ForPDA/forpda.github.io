@@ -1,3 +1,29 @@
+@rem: 0.0625rem;
+@tmColor: #0288d1;
+
+.Radius(@radius: 0.125rem) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+.BoxShadow(@level: 1) {
+	.vendors(@val1,@val2) {
+		-webkit-box-shadow: @val1, @val2;
+		-moz-box-shadow: @val1, @val2;
+		-ms-box-shadow: @val1, @val2;
+		-o-box-shadow: @val1, @val2;
+		box-shadow: @val1, @val2;
+	}
+	& when (@level = 0) { .vendors(none,none); }
+	& when (@level = 1) { .vendors(0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2)) }
+	& when (@level = 2) { .vendors(0 3px 6px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.2))}
+	& when (@level = 3) { .vendors(0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.2))}
+	& when (@level = 4) { .vendors(0 14px 28px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.2))}
+	& when (@level = 5) { .vendors(0 19px 38px rgba(0,0,0,0.3), 0 15px 12px rgba(0,0,0,0.2))}
+}
+
 html {
 	margin: 0;
 	padding: 0;
@@ -12,22 +38,60 @@ body {
 }
 header {
 	display: block;
+//	position: fixed;
+//	left: 0;
+//	top: 0;
+	width: 100%;
 	overflow: hidden;
 	margin: 0;
-	white-space: nowrap;
-	text-overflow: ellipsis;
 	color: white;
-	background: #0288d1;
-	.logo {
-		display: inline-block;
-		vertical-align: middle;
-		a {
-			display: block;
-			img {
+	background: @tmColor;
+	z-index: 99;
+	.BoxShadow(2);
+	.header_container {
+		position: relative;
+		box-sizing: border-box;
+		margin: auto;
+		padding: 0.25rem 0.5rem;
+		max-width: 50rem;
+		.logo {
+			display: inline-block;
+			vertical-align: middle;
+			a {
 				display: block;
-				padding: 0.5rem;
-				width: 2.5rem;
-				height: 2.5rem;
+				img {
+					display: block;
+					padding: 0.25rem;
+					width: 2.5rem;
+					height: 2.5rem;
+				}
+			}
+		}
+		.button {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-top: -1.5rem;
+			height: 3rem;
+			line-height: 3rem;
+			width: 3rem;
+			text-align: center;
+			background-color: @tmColor;
+			&:before {
+				content:'';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -1rem;
+				width: 1rem;
+				height: 100%;
+				background: -webkit-linear-gradient(left, transparent 0%, @tmColor 100%);  
+			}
+			img {
+				display: inline-block;
+				margin-bottom: -6*@rem;
+				width: 1.5rem;
+				height:1.5rem;
 			}
 		}
 	}
@@ -44,26 +108,31 @@ header {
 		}
 	}
 	nav {
-		margin: 1rem 0 0;
+		margin: 0;
 		overflow-x: auto;
+		box-sizing: border-box;
+		text-align: center;
+		overflow-x: auto;
+		z-index: 99;
 		color: white;
-		background: #0288d1;
+		background: @tmColor;
 		ul {
+			display: block;
 			padding: 0;
 			margin: 0;
-			text-align: center;
+			white-space: nowrap;
 			li {
 				display: inline-block;
 				list-style-type: none;
 				&.active {
-					border-bottom: 0.25rem solid white;
+					border-bottom: 3*@rem solid rgba(255,255,255,0.75);
 					a {
 						color: inherit;
 					}
 				}
 				a {
 					display: block;
-					padding: 0.5rem 1.5rem;
+					padding: 0.5rem 1.75rem;
 					text-decoration: none;
 					text-transform: uppercase;
 					font-weight: bold;
@@ -73,13 +142,18 @@ header {
 		}
 	}
 }
+main {
+	z-index: 98;
+//	margin-top: 6.5rem;
+}
 body.home {
 	main {
 		display: block;
 		overflow: hidden;
-		background-color: white;
+		padding: 0 0.5rem;
 		.gallery {
-			overflow-x: scroll;
+			display: none;
+			overflow-x: auto;
 			text-align: center;
 			> div {
 				white-space: nowrap;
@@ -94,35 +168,19 @@ body.home {
 			}
 		}
 		article {
+			display: block;
 			padding: 1rem;
-			margin: auto;
+			margin: 1rem auto;
 			max-width: 50rem;
+			overflow: hidden;
+			.Radius;
+			background: white;
+			.BoxShadow;
 			h1 {
 				font-size: 1.5rem;
 			}
 			p {
 				margin-left: 1rem;
-			}
-			section {
-				position: relative;
-				margin: 1rem 0;
-				overflow: hippen;
-				.ver {}
-				.button.download {
-					position: absolute;
-					top: 50%;
-					right: 0;
-					margin-top: -14*0.0625rem;
-					border-radius: 0.125rem;
-					background: green;
-					a {
-						display: inline-block;
-						padding: 0.25rem 0.5rem;
-						margin-bottom: 0.0625rem;
-						text-decoration: none;
-						color: white;
-					}
-				}
 			}
 		}
 	}
@@ -143,7 +201,7 @@ body.developers {
 			padding: 1rem;
 			border-radius: 0.125rem;
 			background-color: white;
-			-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2), 0 2px 4px rgba(0,0,0,0.1);
+			.BoxShadow;
 			.ava {
 				float: left;
 				margin: 0 1.25rem 0.75rem 0;
@@ -177,7 +235,7 @@ body.developers {
 				}
 				.name {
 					margin: 0.5rem 0;
-					font-size: 1.25rem;
+					font-size: 1.125rem;
 				}
 				.scills {
 					margin: 0.5rem 0;
@@ -238,7 +296,7 @@ footer {
 	box-sizing: border-box;
 	border-radius: 0.125rem;
 	background-color: white;
-	-webkit-box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.2), 0 0.5rem 1rem rgba(0,0,0,0.1);
+	.BoxShadow(3);
 	> h1 {
 		margin: 1.5rem;
 	}
