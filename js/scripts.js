@@ -1,9 +1,24 @@
 /*
- *		margin header
+ *		header hidden
  */
 
 var body = document.body;
-// body.style.height = document.documentElement.clientHeight + "px";
+var header = document.querySelector("header");
+var header_container = document.querySelector(".header_container");
+var nav = document.querySelector("nav");
+var header_container_height = header_container.clientHeight;
+
+body.style.paddingTop = header.clientHeight + "px";
+window.addEventListener("scroll", function(e) {
+	if (nav.getBoundingClientRect().top <= 20) {
+		header_container.classList.add("hidden");
+		header.classList.add("fixed");
+	}
+	if (window.pageYOffset < header_container_height) {
+		header_container.classList.remove("hidden");
+		header.classList.remove("fixed");
+	}
+});
 
 /*
  *		Gallery	
