@@ -6,7 +6,7 @@
 	<meta name="description" content="Приложение ForPDA - неофициоальный клиент сайта 4pda.ru">
 	<meta name="keywords" content="ForPDA, неофициальный клиент 4pda">
 	<title>ForPDA | Разработчики</title>
-	<link href="styles/styles.css" rel="stylesheet">
+	<!--link href="styles/styles.css" rel="stylesheet"-->
 	<script type="text/javascript" src="../../z_forum_helpers.js"></script>
 </head>
 <body class="developers">
@@ -26,10 +26,9 @@
 
 		<nav>
 			<ul>
-				<li id="scroll_count"></li>
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="instructions.html">Инструкции</a></li>
-				<li class="active"><a href="#">Разработчики</a></li>
+			  <li><a href="index.html"><img src="src/home.svg"><span>Главная</span></a></li>
+				<li><a href="instructions.html"><img src="src/local_library.svg"><span>Инструкции</span></a></li>
+				<li class="active"><a href="#"><img src="src/contacts.svg"><span>Разработчики</span></a></li>
 			</ul>
 		</nav>
 	</header>

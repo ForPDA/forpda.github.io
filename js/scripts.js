@@ -8,6 +8,7 @@ var header_container = document.querySelector(".header_container");
 var nav = document.querySelector("nav");
 var header_container_height = header_container.clientHeight;
 
+
 body.style.paddingTop = header.clientHeight + "px";
 window.addEventListener("scroll", function(e) {
 	if (nav.getBoundingClientRect().top <= 20) {

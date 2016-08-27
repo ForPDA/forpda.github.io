@@ -34,19 +34,27 @@ header.fixed {
 }
 header .header_container {
   position: relative;
-  top: 0;
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto 0.5rem;
   padding: 0.25rem 0.5rem;
-  max-width: 50rem;
   -webkit-transition: position ease 0.5s;
   -moz-transition: position ease 0.5s;
   -ms-transition: position ease 0.5s;
   -o-transition: position ease 0.5s;
   transition: position ease 0.5s;
 }
+@media screen and (max-width: 60rem) {
+  header .header_container {
+    max-width: 40rem;
+  }
+}
+@media screen and (max-width: 80rem) {
+  header .header_container {
+    max-width: 40rem;
+  }
+}
 header .header_container.hidden {
-  top: -10rem;
+  display: none;
 }
 header .header_container .logo {
   display: inline-block;
@@ -93,6 +101,7 @@ header .header_container .button:before {
   width: 1rem;
   height: 100%;
   background: -webkit-linear-gradient(left, transparent 0%, #0288d1 100%);
+  background: linear-gradient(left, transparent 0%, #0288d1 100%);
 }
 header .header_container .button img {
   display: inline-block;
@@ -118,6 +127,29 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   list-style-type: none;
+  background-clip: padding-box;
+}
+header nav ul li a {
+  display: block;
+  padding: 0.5rem 1.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+header nav ul li a img {
+  margin: 0 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+header nav ul li a span {
+  vertical-align: middle;
+}
+@media screen and (max-width: 40rem) {
+  header nav ul li a span {
+    display: none;
+  }
 }
 header nav ul li.active {
   border-bottom: 0.1875rem solid rgba(255, 255, 255, 0.75);
@@ -125,16 +157,9 @@ header nav ul li.active {
 header nav ul li.active a {
   color: inherit;
 }
-header nav ul li a {
-  display: block;
-  padding: 0.5rem 1.75rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: rgba(255, 255, 255, 0.5);
-}
 main {
   z-index: 98;
+  margin: 0;
 }
 body.home main {
   display: block;
@@ -161,7 +186,7 @@ body.home main article {
   display: block;
   padding: 1rem;
   margin: 1rem auto;
-  max-width: 50rem;
+  max-width: 40rem;
   overflow: hidden;
   -webkit-border-radius: 0.125rem;
   -moz-border-radius: 0.125rem;
@@ -183,9 +208,9 @@ body.home main article p {
 }
 body.developers article {
   margin: auto;
-  max-width: 50rem;
+  max-width: 40rem;
 }
-@media (min-width: 50rem) {
+@media (min-width: 40rem) {
   body.developers article {
     text-align: center;
   }
@@ -209,7 +234,7 @@ body.developers article section .ava {
   float: left;
   margin: 0 1.25rem 0.75rem 0;
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 20rem) {
   body.developers article section .ava {
     display: block;
     text-align: center;
@@ -229,7 +254,7 @@ body.developers article section .ava a img {
   overflow: hidden;
   border-radius: 100%;
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 20rem) {
   body.developers article section .ava a img {
     height: 7.5rem;
     width: 7.5rem;
@@ -238,7 +263,7 @@ body.developers article section .ava a img {
 body.developers article section .inf {
   text-align: left;
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 20rem) {
   body.developers article section .inf {
     text-align: center;
   }
@@ -256,10 +281,14 @@ body.developers article section ul {
   margin: 1rem 0 0 0;
   padding: 0;
   text-align: left;
+  overflow-x: auto;
+  white-space: nowrap;
 }
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 20rem) {
   body.developers article section ul {
     text-align: center;
+    overflow-x: visible;
+    white-space: normal;
   }
 }
 body.developers article section ul li {

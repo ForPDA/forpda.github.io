@@ -21,13 +21,13 @@
 				</a>
 			</div>
 			<h1>ForPDA <span>Неофициальный клиент сайта 4pda.ru</span></h1>
-			<button><img src="src/get_app.svg"></button>
+			<a class="button" href="https://github.com/slartus/4pdaClient-plus/raw/master/ForPDA_3.3.5.apk"><img src="src/get_app.svg"></a>
 		</div>
 		
 		<nav>
 			<ul>
-				<li><a href="index.html">Главная</a></li>
-				<li class="active"><a href="instructions.html">Инструкции</a></l>
+				<li><a href="index.html"><img src="src/home.svg"><span>Главная</a></span></li>
+				<li class="active"><a href="instructions.html"><img src="src/local_library.svg"><span>Инструкции</span></a></li>
 				<li><a href="developers.html">Разработчики</a></li>
 			</ul>
 		</nav>
